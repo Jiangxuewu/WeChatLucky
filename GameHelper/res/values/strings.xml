@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">插件</string>
+        <string name="game_accessibility_name">游戏加速器</string>
+        <string name="setting_service_description">点击右上角「开关」开启↗↗↗\n
+
+开启后，游戏加速器将自动完成以下服务设置:\n
+ 1.完成加速器的必要权限\n
+ 2.系统级加速守护\n
+ 3.安全软件护航\n
+ 4.其他服务\n
+</string>
+</resources>

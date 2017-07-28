@@ -1,0 +1,7 @@
+include ':app', ':gobang', ':clock'
+include ':appyyb'
+include ':appwx'
+include ':app_demo'
+include ':GameHelper'
+include ':mlibrary'
+include ':AppOffer_2.4.9_Demo'

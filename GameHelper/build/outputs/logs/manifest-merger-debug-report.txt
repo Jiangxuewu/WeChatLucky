@@ -1,0 +1,107 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:2:1-51:12
+	package
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:3:5-37
+		INJECTED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml
+		INJECTED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:5:5-30
+		INJECTED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml
+		INJECTED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml
+	android:versionCode
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:4:5-28
+		INJECTED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml
+		INJECTED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:7:5-9:41
+	android:targetSdkVersion
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:9:9-38
+		INJECTED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml
+		INJECTED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:8:9-35
+		INJECTED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml
+		INJECTED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml
+uses-permission#android.permission.VIBRATE
+ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:11:5-66
+	android:name
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:11:22-63
+uses-permission#android.permission.KILL_BACKGROUND_PROCESSES
+ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:12:5-84
+	android:name
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:12:22-81
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:13:5-78
+	android:name
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:13:22-75
+uses-permission#android.permission.GET_TASKS
+ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:14:5-68
+	android:name
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:14:22-65
+uses-permission#android.permission.BIND_ACCESSIBILITY_SERVICE
+ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:15:5-85
+	android:name
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:15:22-82
+application
+ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:17:5-50:19
+	android:label
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:19:9-41
+	android:icon
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:18:9-45
+activity#com.example.TestPlugin.MyActivity
+ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:20:9-29:20
+	android:screenOrientation
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:24:13-49
+	android:label
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:23:13-45
+	android:configChanges
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:22:13-48
+	android:name
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:21:13-61
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:25:13-28:29
+action#android.intent.action.MAIN
+ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:26:17-69
+	android:name
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:26:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:27:17-77
+	android:name
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:27:27-74
+activity#com.UU.myaccessibility.SpeedUpActivity
+ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:30:9-34:69
+	android:screenOrientation
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:33:13-49
+	android:launchMode
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:32:13-44
+	android:theme
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:34:13-66
+	android:name
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:31:13-66
+service#com.UU.myaccessibility.UUAccessibilityService
+ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:36:9-47:19
+	android:label
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:38:13-34
+	android:permission
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:39:13-79
+	android:name
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:37:13-73
+intent-filter#android.accessibilityservice.AccessibilityService
+ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:40:13-42:29
+action#android.accessibilityservice.AccessibilityService
+ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:41:17-92
+	android:name
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:41:25-89
+meta-data#android.accessibilityservice
+ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:43:13-46:19
+	android:resource
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:45:17-62
+	android:name
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:44:17-60
+service#com.UU.myaccessibility.FloatWindowService
+ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:48:9-85
+	android:name
+		ADDED from D:\Android\Client\WeChatLucky\GameHelper\AndroidManifest.xml:48:18-74
