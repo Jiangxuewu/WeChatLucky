@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AutoNotify</string>
+    <string name="contact">Contacts</string>
+    <string name="nickname">safetest</string>
+    <string name="sendMsg">Messages</string>
+    <string name="sendBtn">Send</string>
+    <string name="group">Group</string>
+</resources>

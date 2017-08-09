@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.accessibility.AccessibilityManager;
 
+import com.bb_sz.FZHelper;
+
 import java.util.List;
 
 
@@ -24,7 +26,7 @@ public class MainActivity extends Activity implements AccessibilityManager.Acces
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+//        FZHelper.doSuExec(new String[]{"ls"});
         //监听AccessibilityService 变化
         accessibilityManager = (AccessibilityManager) getSystemService(Context.ACCESSIBILITY_SERVICE);
         accessibilityManager.addAccessibilityStateChangeListener(this);

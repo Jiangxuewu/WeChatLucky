@@ -1,9 +1,12 @@
 package com.bb_sz.wx;
 
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+
+import java.io.DataOutputStream;
 
 public class CoreReceiver extends BroadcastReceiver {
     private static final String TAG = "CoreSLWX";
@@ -29,13 +32,34 @@ public class CoreReceiver extends BroadcastReceiver {
             group = intent.getStringExtra("group");
             sendBtn = intent.getStringExtra("sendBtn");
             sendTxt = intent.getStringExtra("sendTxt");
-            openWx();
+            openWx(context);
             Log.i(TAG, "contact = " + contact + ", nickname = " + nickname + ", group = " + group + ", sendBtn = " + sendBtn + ", sendTxt = " + sendTxt);
         }
     }
 
-    private void openWx() {
+    private void openWx(Context context) {
         String[] cmd = {"am start -n com.tencent.mm/.ui.LauncherUI"};
-        WeChatService.doSuExec(cmd);
+        doSuExec(cmd);
+//        Intent intent = new Intent();
+//        ComponentName cmp = new ComponentName(" com.tencent.mm ","com.tencent.mm.ui.LauncherUI");
+//        intent.setAction(Intent.ACTION_MAIN);
+//        intent.addCategory(Intent.CATEGORY_LAUNCHER);
+//        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//        intent.setComponent(cmp);
+//        context.startActivity(intent);
+    }
+
+    public static void doSuExec(String[] cmds) {
+        try {
+            Process process = Runtime.getRuntime().exec("su");
+            DataOutputStream os = new DataOutputStream(process.getOutputStream());
+            for (String cmd : cmds) {
+                Log.d("cmd", "cmd = " + cmd);
+                os.writeBytes(cmd + "\n");
+            }
+            os.flush();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

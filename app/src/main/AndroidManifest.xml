@@ -22,7 +22,7 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.bb_sz.intent.action.sl360"/>
+                <action android:name="com.bb_sz.intent.action.helper"/>
             </intent-filter>
         </receiver>
 
