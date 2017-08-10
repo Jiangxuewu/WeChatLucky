@@ -25,7 +25,14 @@
                 <action android:name="com.bb_sz.intent.action.helper"/>
             </intent-filter>
         </receiver>
-
+        <receiver
+            android:name="com.bb_sz.receiver.ACTReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="SKY_ACTIVITY_ACTION" />
+            </intent-filter>
+        </receiver>
         <service
             android:name=".WeChatService"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">

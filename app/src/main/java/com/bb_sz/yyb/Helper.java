@@ -4,6 +4,7 @@ import android.accessibilityservice.AccessibilityService;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.accessibility.AccessibilityNodeInfo;
+import android.widget.FrameLayout;
 import android.widget.ListView;
 
 import com.bb_sz.FZHelper;
@@ -27,6 +28,12 @@ public class Helper {
         if (debug) Log.i(TAG, "handlerEvent(), name = " + name);
         boolean res = FZHelper.viewClickForId(service, "com.tencent.android.qqdownloader:id/a30");
         if (debug) Log.i(TAG, "handlerEvent(), a30 res = " + res);
+
+        String txt = FZHelper.viewTextForId(service, "com.android.vpndialogs:id/warning");
+        if (null != txt && txt.contains("VPN连接")) {
+            res = FZHelper.viewClickForId(service, "android:id/button2");
+        }
+
         if (name.contains(".activity.SplashImplActivity")) {
         } else if (name.contains(".assistantv2.activity.MainActivity")) {
             //点击搜索框
@@ -36,6 +43,7 @@ public class Helper {
             res = FZHelper.viewClickForId(service, "com.tencent.android.qqdownloader:id/a31");
             if (debug) Log.i(TAG, "handlerEvent(), a31 res = " + res);
         } else if (name.contains(".nucleus.search.SearchActivity")) {
+
             //输入热词
             if (!TextUtils.isEmpty(CoreReceiver.input) && (searchTime == 0 || System.currentTimeMillis() - searchTime > 1000 * 20)) {
                 res = FZHelper.edittextInput(service, "com.tencent.android.qqdownloader:id/yv", CoreReceiver.input);
@@ -44,7 +52,7 @@ public class Helper {
                     CoreReceiver.input = null;
                     //搜索
                     res = FZHelper.viewClickForId(service, "com.tencent.android.qqdownloader:id/a5t");
-                    if (res){
+                    if (res) {
                         searchTime = System.currentTimeMillis();
                     }
                     if (debug) Log.e(TAG, "handlerEvent(), 搜索 res = " + res);
@@ -72,6 +80,20 @@ public class Helper {
                 List<AccessibilityNodeInfo> nodes = FZHelper.getNodesForId(service, "com.tencent.android.qqdownloader:id/a78");
                 if (debug)
                     Log.i(TAG, "find ListView  nodes size is " + (null == nodes ? "null" : nodes.size()));
+                txt = FZHelper.viewTextForId(service, "com.tencent.android.qqdownloader:id/ahk");
+                if (debug) Log.i(TAG, " \u4e0a\u62c9\u52a0\u8f7d txt = " + txt);
+                if (null != txt && txt.equals("\u4e0a\u62c9\u52a0\u8f7d")){
+                    List<AccessibilityNodeInfo> pullNodes = FZHelper.getNodesForId(service, "com.tencent.android.qqdownloader:id/ahk");
+                    if (null != pullNodes && pullNodes.size() > 0){
+                        AccessibilityNodeInfo tmp = pullNodes.get(0).getParent();//.getParent();
+                        if (debug) Log.i(TAG, " \u4e0a\u62c9\u52a0\u8f7d cls = " + tmp.getClassName().toString());
+                        if (FrameLayout.class.getName().equals(tmp.getClassName().toString())){
+                            res = tmp.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+                            if (debug) Log.i(TAG, " \u4e0a\u62c9\u52a0\u8f7d res = " + res);
+                        }
+                    }
+                }
+
                 if (null != nodes && nodes.size() > 0) {
                     for (AccessibilityNodeInfo item : nodes) {
                         printNodeChild(item);
@@ -79,7 +101,7 @@ public class Helper {
                 }
             }
         } else if (name.contains("pangu.activity.AppDetailActivityV5")) {
-            String txt = FZHelper.viewTextForId(service, "com.tencent.android.qqdownloader:id/r5");
+            txt = FZHelper.viewTextForId(service, "com.tencent.android.qqdownloader:id/r5");
             Log.i(TAG, "yyb txt = " + txt);
             if (null != txt && txt.contains("下载")) {
                 //下载
